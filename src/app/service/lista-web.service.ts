@@ -14,11 +14,12 @@ export class ListaWebService {
     return this.http.get("https://jsonplaceholder.typicode.com/users")
   }
   get(Id: number){
-     return this.http.get('https://jsonplaceholder.typicode.com/users/ ${id}')
+     return this.http.get(`https://jsonplaceholder.typicode.com/users/${Id}`);
   }
 }
-  
+public obterTarefas(): any {
+  return this.get('//jsonplaceholder.typicode.com/todos')
   
   //public obterlista():any {}
  // return this.
-
+}
